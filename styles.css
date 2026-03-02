@@ -300,3 +300,66 @@ footer {
         gap: 20px;
     }
 }
+/* --- ОБЩИЕ СТИЛИ ДЛЯ КНОПОК И ЦЕНТРИРОВАНИЯ --- */
+
+/* Центрируем содержимое всех секций и карточек курсов */
+section, article, .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Расстояние между текстом и кнопками */
+}
+
+/* Красивые желтые кнопки */
+.button-link {
+    display: inline-block;
+    background-color: #ffcc00; /* Твой фирменный желтый */
+    color: #000 !important;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 10px 0; /* Отступ сверху и снизу, чтобы не слипались */
+    min-width: 200px; /* Чтобы кнопки были одинаковой удобной ширины */
+    transition: transform 0.2s;
+}
+
+.button-link:hover {
+    transform: scale(1.05);
+}
+
+/* --- АДАПТАЦИЯ ПОД МОБИЛЬНЫЕ ТЕЛЕФОНЫ --- */
+
+@media (max-width: 768px) {
+    /* Меню в столбик, чтобы не наезжало друг на друга */
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Кнопки на весь экран для удобства нажатия пальцем */
+    .button-link {
+        width: 90%; 
+        max-width: 300px;
+    }
+
+    /* Уменьшаем шрифты, чтобы заголовки не ломались */
+    h1 {
+        font-size: 1.4rem !important;
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem !important;
+    }
+
+    /* Убираем лишние пустые места по бокам */
+    main {
+        padding: 15px 10px;
+    }
+}
